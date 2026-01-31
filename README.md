@@ -157,8 +157,8 @@ Windows Task Scheduler
 Linux cron jobs
 
 Optional: Add Microsoft Teams webhook alerts:
-`
-import requests, json
+
+`import requests, json
 webhook = "YOUR_TEAMS_WEBHOOK_URL"
 payload = {"text": "🚨 Alert message here"}
 requests.post(webhook, data=json.dumps(payload), headers={"Content-Type":"application/json"})
