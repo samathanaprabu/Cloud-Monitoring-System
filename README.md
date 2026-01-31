@@ -139,6 +139,31 @@ Cloud-Monitoring-System/
 └── README.md
 
 ---
+##📌 Notes:
+
+Replace 'YOUR_EMAIL_PASSWORD_OR_TOKEN' with your SMTP password or GitHub token.
+
+Install required packages if missing:
+`
+pip install psutil pywin32
+`
+
+pywin32 is needed only for Windows service & event log monitoring.
+
+You can schedule these scripts using:
+
+Windows Task Scheduler
+
+Linux cron jobs
+
+Optional: Add Microsoft Teams webhook alerts:
+`
+import requests, json
+webhook = "YOUR_TEAMS_WEBHOOK_URL"
+payload = {"text": "🚨 Alert message here"}
+requests.post(webhook, data=json.dumps(payload), headers={"Content-Type":"application/json"})
+`
+---
 
 ## 📌 Future Enhancements
 - SIEM integration (Azure Sentinel / Splunk)  
